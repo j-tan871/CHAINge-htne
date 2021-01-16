@@ -16,8 +16,9 @@ def create_user():
 
 @app.route('/getBalance', methods=['GET'])
 def get_balance():
-    data = {'username':'bryant1',
-            'password':'password'}
+    data = request.json
+    # data = {'username':'bryant1',
+    #         'password':'password'}
     username = data['username']
     return str(int(get_user_balance(username).split('.')[0]))
 
@@ -32,6 +33,18 @@ def add_transaction():
     process_transaction(username, password, amt, destination)
     return "Success"
 
+@app.route('/publicKey', methods=['GET'])
+def get_wallet():
+    data = request.json
+    username = data['username']
+    return get_public(username)
+
+@app.route('/privateKey', methods = ['GET'])
+def get_private():
+    data= request.json
+    username = data['username']
+    password = data['password']
+    return get_private_key()
 
 if __name__ == "__main__":
     app.debug = True
