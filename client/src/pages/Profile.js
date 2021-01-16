@@ -1,7 +1,7 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Card, Container, Row, Col } from "reactstrap";
+import { Button, Card, Container, Row, Col, Progress } from "reactstrap";
 
 import image from '../hehe.jpg';
 
@@ -16,7 +16,7 @@ class Profile extends React.Component {
       <>
         <main className="profile-page" ref="main">
           <section className="section-profile-cover section-shaped my-0">
-            {/* Circles background */}
+            {/* Circles background (can add bg later) */}
             {/* <div className="shape shape-style-1 shape-default alpha-4">
               <span />
               <span />
@@ -66,24 +66,8 @@ class Profile extends React.Component {
                       lg="4"
                     >
                       <div className="card-profile-actions py-4 mt-lg-0">
-                        {/* <Button
-                          className="mr-4"
-                          color="info"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          size="sm"
-                        >
-                          Connect
-                        </Button> */}
-                        <Button
-                          className="float-right"
-                          color="default"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
-                          size="sm"
-                        >
-                          Message
-                        </Button>
+                      <div className="text-left">Task Progress</div>
+                      <Progress value={75} />
                       </div>
                     </Col>
                     <Col className="order-lg-1" lg="4">
@@ -120,8 +104,19 @@ class Profile extends React.Component {
                       <i className="ni education_hat mr-2" />
                       University of Computer Science
                     </div>
+                    <div className="card-profile-actions py-4 mt-lg-0">
+                        <Button
+                          className="float-center"
+                          color="default"
+                          href="#pablo"
+                          onClick={e => e.preventDefault()}
+                          size="sm"
+                        >
+                          Message
+                        </Button>
+                    </div>
                   </div>
-                  <div className="mt-5 py-5 border-top text-center">
+                  <div className="mt-2 py-5 border-top text-center">
                     <Row className="justify-content-center">
                       <Col lg="9">
                         <p>
@@ -131,9 +126,6 @@ class Profile extends React.Component {
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
                         nisi ut aliquip ex ea commodo consequat.
                         </p>
-                        {/* <a href="#pablo" onClick={e => e.preventDefault()}>
-                          Show more
-                        </a> */}
                       </Col>
                     </Row>
                   </div>
@@ -148,14 +140,3 @@ class Profile extends React.Component {
 }
 
 export default Profile;
-
-
-// import React from 'react';
-
-// const Profile = () => {
-//   return (
-//     <div>Profile</div>
-//   );
-// }
-
-// export default Profile;
