@@ -4,29 +4,22 @@ import {
   Switch,
   Route,
   Link
-} from "react-router-dom";
+} from 'react-router-dom';
 import {
-  UncontrolledCollapse,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
-  NavItem,
   NavLink,
   Nav,
   Container,
-  Row,
-  Col,
   Button
-} from "reactstrap";
+} from 'reactstrap';
 
 import Home from '../pages/Home';
-import About from '../pages/About';
 import Login from '../pages/Login';
 import Group from '../pages/Group';
 import FindGroup from '../pages/FindGroup';
 import Profile from '../pages/Profile';
+import Shop from '../pages/Shop';
 
 const Navigation = () => {
   return (
@@ -37,15 +30,16 @@ const Navigation = () => {
           expand="lg"
         >
           <Container>
+            <Link></Link>
             <NavbarBrand onClick={e => e.preventDefault()}>
-              CHAINge
-        </NavbarBrand>
+              <Link to="/" style={styles.navLink}>CHAINge</Link>
+            </NavbarBrand>
             <Nav className="ml-lg-auto">
-              <NavLink><Link to="/about">About Us</Link></NavLink>
-              <NavLink><Link to="/groups">My Groups</Link></NavLink>
-              <NavLink><Link to="/findGroups">Find Groups</Link></NavLink>
-              <NavLink><Link to="/profile">Profile</Link></NavLink>
-              {/* <NavLink><Link to="/login">Login</Link></NavLink> */}
+              <NavLink><Link style={styles.navLink} onClick={console.log('hi')}>About</Link></NavLink>
+              <NavLink><Link to="/groups" style={styles.navLink}>My Groups</Link></NavLink>
+              <NavLink><Link to="/findGroups" style={styles.navLink}>Find Groups</Link></NavLink>
+              <NavLink><Link to="/shop" style={styles.navLink}>Shop</Link></NavLink>
+              <NavLink><Link to="/profile" style={styles.navLink}>Profile</Link></NavLink>
             </Nav>
             <Link to="/login">
               <Button color="primary" type="button" className="ml-3">Login</Button>
@@ -53,9 +47,6 @@ const Navigation = () => {
           </Container>
         </Navbar>
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
           <Route path="/groups">
             <Group />
           </Route>
@@ -68,6 +59,9 @@ const Navigation = () => {
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/shop">
+            <Shop />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
@@ -75,6 +69,13 @@ const Navigation = () => {
       </Router>
     </React.Fragment>
   );
+}
+
+const styles = {
+  navLink: {
+    color: '#525f7f', 
+    fontSize: 14
+  }
 }
 
 export default Navigation;
