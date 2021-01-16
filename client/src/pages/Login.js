@@ -24,7 +24,7 @@ const Login = () => {
   }
 
   return (
-    <Container className="d-flex justify-content-center">
+    <Container className="d-flex justify-content-center mt-4">
       <Col lg="5" className="mt-3">
         <Card className="bg-secondary shadow border-0">
           <CardBody className="px-lg-5 py-lg-5">
@@ -40,7 +40,7 @@ const Login = () => {
                     <InputGroup className="input-group-alternative mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="ni ni-hat-3" />
+                          <i className="ni ni-circle-08" />
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input placeholder="Name" type="text" />
@@ -72,16 +72,6 @@ const Login = () => {
                   />
                 </InputGroup>
               </FormGroup>
-              {
-                !login ? <div className="text-muted font-italic">
-                    <small>
-                      password strength:{" "}
-                      <span className="text-success font-weight-700">
-                        strong
-                      </span>
-                    </small>
-                  </div> : null
-              }
               <div className="text-center">
                 {
                   login ? 

@@ -35,7 +35,7 @@ const Navigation = () => {
               <Link to="/" style={styles.navLink}>CHAINge</Link>
             </NavbarBrand>
             <Nav className="ml-lg-auto">
-              <NavLink><Link style={styles.navLink} onClick={console.log('hi')}>About</Link></NavLink>
+              <NavLink><Link to="/" style={styles.navLink} onClick={console.log('hi')}>About</Link></NavLink>
               <NavLink><Link to="/groups" style={styles.navLink}>My Groups</Link></NavLink>
               <NavLink><Link to="/findGroups" style={styles.navLink}>Find Groups</Link></NavLink>
               <NavLink><Link to="/shop" style={styles.navLink}>Shop</Link></NavLink>

@@ -28,7 +28,7 @@ const GroupCard = props => {
                 />
               </a>
             </div>
-            <CardTitle tag="h5" className="justify-content-center col-8 mt-1">{props.name}</CardTitle>
+            <CardTitle tag="h5" className="justify-content-center col-8 mt-3">{props.name}</CardTitle>
           </Row>
           <Row>
             <CardText tag="h6" className="mb-2 text-muted text">{props.description}</CardText>
