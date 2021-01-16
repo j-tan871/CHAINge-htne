@@ -10,7 +10,7 @@ import {
   Badge
 } from 'reactstrap';
 
-import Tag from '../components/Tag';
+import Tag from './Tag';
 import './GroupCard.css';
 
 const GroupCard = props => {
