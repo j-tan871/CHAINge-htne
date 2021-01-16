@@ -20,19 +20,20 @@ import Group from '../pages/Group';
 import FindGroup from '../pages/FindGroup';
 import Profile from '../pages/Profile';
 import Shop from '../pages/Shop';
+import logo from '../logo.JPG';
 
 const Navigation = () => {
   return (
     <React.Fragment>
       <Router>
         <Navbar
-          className="navbar-horizontal navbar-dark bg-light"
+          className="navbar-horizontal navbar-dark bg-#ffffff"
           expand="lg"
         >
           <Container>
             <Link></Link>
             <NavbarBrand onClick={e => e.preventDefault()}>
-              <Link to="/" style={styles.navLink}>CHAINge</Link>
+              <Link to="/" style={styles.navLink}><img alt="logo" src={logo}/></Link>
             </NavbarBrand>
             <Nav className="ml-lg-auto">
               <NavLink><Link to="/" style={styles.navLink} onClick={console.log('hi')}>About</Link></NavLink>
@@ -74,7 +75,7 @@ const Navigation = () => {
 const styles = {
   navLink: {
     color: '#525f7f', 
-    fontSize: 14
+    fontSize: 16
   }
 }
 
