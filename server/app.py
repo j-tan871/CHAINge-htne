@@ -16,9 +16,10 @@ def create_user():
 
 @app.route('/getBalance', methods=['GET'])
 def get_balance():
-    data = request.json
+    data = {'username':'bryant1',
+            'password':'password'}
     username = data['username']
-    return get_user_balance(username)
+    return str(int(get_user_balance(username).split('.')[0]))
 
 
 @app.route('/addTransaction', methods=["POST"])

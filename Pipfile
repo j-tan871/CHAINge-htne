@@ -12,6 +12,7 @@ pycryptodome = "==3.4.3"
 stellar-sdk = "*"
 requests-toolbelt = "*"
 flask = "*"
+pipenv-to-requirements = "*"
 
 [dev-packages]
 

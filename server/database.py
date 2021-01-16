@@ -107,11 +107,10 @@ def process_transaction(username, password, amt, destination):
         base_fee=100) \
         .append_payment_op(  # add a payment operation to the transaction
         destination=get_public(destination),
-        asset_code="chaingeCoin",
+        asset_code="XLM",
         amount=amt) \
         .append_set_options_op(  # add a set options operation to the transaction
         home_domain="overcat.me") \
-        .append_allow_trust_op(destination, 'chaingeCoin', True)\
         .set_timeout(60) \
         .build()  # mark this transaction as valid only for the next 30 seconds
     transaction.sign(root_keypair)
