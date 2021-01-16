@@ -19,63 +19,72 @@ const FindGroup= () => {
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "healthcare", "disability justice"
-        ]
+        ], 
+        "keywords": "healthcare disability justice"
       }, 
       {
         "name": "Group 2", 
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "LGBTQ+ empowerment"
-        ]
+        ], 
+        "keywords": "LGBTQ+ empowerment"
       }, 
       {
         "name": "Group 3", 
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "environment", "decolonization"
-        ]
+        ], 
+        "keywords": "environment decolonization"
       }, 
       {
         "name": "Group 4", 
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "healthcare", "disability justice"
-        ]
+        ], 
+        "keywords": "healthcare disability justice"
       }, 
       {
         "name": "Group 5", 
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "LGBTQ+ empowerment"
-        ]
+        ], 
+        "keywords": "LGBTQ+ empowerment"
       }, 
       {
         "name": "Group 6", 
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "environment","decolonization"
-        ]
+        ], 
+        "keywords": "environment decolonization"
       }, 
       {
         "name": "Group 7", 
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "healthcare", "disability justice"
-        ]
+        ], 
+        "keywords": "healthcare disability justice"
       }, 
       {
         "name": "Group 8", 
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "LGBTQ+ empowerment"
-        ]
+        ], 
+        "keywords": "LGBTQ+ empowerment"
       }, 
       {
         "name": "Group 9", 
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         "tags": [
           "environment", "decolonization"
-        ]
+        ], 
+        "keywords": "environment decolonization"
       }, 
       
     ]
@@ -85,6 +94,9 @@ const FindGroup= () => {
     return list.filter(
       (listItem) => (
         listItem.name
+          .toLowerCase()
+          .includes(search.toLowerCase()) ||
+        listItem.keywords
           .toLowerCase()
           .includes(search.toLowerCase()))
     );
