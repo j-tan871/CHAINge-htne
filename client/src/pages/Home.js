@@ -10,8 +10,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <div style={{...styles.window, alignItems: 'center', marginTop: 100, backgroundImage: `url(${image})`, backgroundRepeat:"no-repeat", backgroundPosition: "center", backgroundSize: "absolute" }}>
-        <h1>yeehaw</h1>
-        <i style={styles.icon} className="fa fa-chevron-down fa-2x"></i>
+        <h1>CHAINge</h1>
       </div>
       <div style={styles.window}>
         <Container>
