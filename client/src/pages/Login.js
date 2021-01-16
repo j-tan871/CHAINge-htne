@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   Button,
   Card,
@@ -18,9 +19,14 @@ import {
 
 const Login = () => {
   const [login, setLogin] = useState(true);
+  const history = useHistory();
 
   const handleClick = () => {
     setLogin(!login);
+  }
+
+  const redirect = () => {
+      history.push("/profile");
   }
 
   return (
@@ -74,17 +80,18 @@ const Login = () => {
               </FormGroup>
               <div className="text-center">
                 {
-                  login ? 
+                  login ?
                   <Button
                     className="mt-4"
                     color="primary"
                     type="button"
+                    onClick={redirect}
                   >
                     Login
                   </Button> :
                   <Button
                     className="mt-4"
-                    color="primary" 
+                    color="primary"
                     type="button"
                   >
                     Sign Up
@@ -97,7 +104,7 @@ const Login = () => {
                     Don't have an account?{" "}
                     <CardLink className="text-primary font-weight-700" onClick={handleClick}>
                       Sign up
-                    </CardLink></small> : 
+                    </CardLink></small> :
                   <small>Already have an account?{" "}
                     <CardLink className="text-primary font-weight-700" onClick={handleClick}>
                       Log in
