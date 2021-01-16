@@ -17,7 +17,7 @@ class Profile extends React.Component {
         <main className="profile-page" ref="main">
           <section className="section-profile-cover section-shaped my-0">
             {/* Circles background (can add bg later) */}
-            {/* <div className="shape shape-style-1 shape-default alpha-4">
+            <div className="shape shape-default alpha-5">
               <span />
               <span />
               <span />
@@ -27,7 +27,7 @@ class Profile extends React.Component {
               <span />
               <span />
               <span />
-            </div> */}
+            </div>
             {/* SVG separator */}
             <div className="separator separator-bottom separator-skew">
               <svg
