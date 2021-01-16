@@ -1,15 +1,15 @@
 import React from 'react';
 import {
-  Container, 
+  Container,
   Row
 } from 'reactstrap';
-
+import image from '../homebackground.jpg';
 const screenHeight = window.innerHeight;
 
 const Home = () => {
   return (
     <React.Fragment>
-      <div style={{...styles.window, alignItems: 'center', marginTop: 100}}>
+      <div style={{...styles.window, alignItems: 'center', marginTop: 100, backgroundImage: `url(${image})`, backgroundRepeat:"no-repeat", backgroundPosition: "center", backgroundSize: "absolute" }}>
         <h1>yeehaw</h1>
         <i style={styles.icon} className="fa fa-chevron-down fa-2x"></i>
       </div>
@@ -27,13 +27,13 @@ const Home = () => {
 
 const styles = {
   window: {
-    height: screenHeight, 
+    height: screenHeight,
     display: 'flex',
     flexDirection: 'column'
-  }, 
+  },
   icon: {
     alignSelf: 'center',
-    position: 'absolute', 
+    position: 'absolute',
     bottom: 50
   }
 }
