@@ -45,9 +45,9 @@ class Profile extends React.Component {
               </svg>
             </div>
           </section>
-          <section className="section">
+          <section>
             <Container>
-              <Card className="card-profile shadow mt--300">
+              <Card className="card-profile shadow mt--300 mb-5">
                 <div className="px-4">
                   <Row className="justify-content-center">
                     <Col className="order-lg-2" lg="3">

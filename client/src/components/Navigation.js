@@ -31,7 +31,6 @@ const Navigation = () => {
           expand="lg"
         >
           <Container>
-            <Link></Link>
             <NavbarBrand onClick={e => e.preventDefault()}>
               <Link to="/" style={styles.navLink}><img alt="logo" src={logo}/></Link>
             </NavbarBrand>
