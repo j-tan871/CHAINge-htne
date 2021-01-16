@@ -45,9 +45,11 @@ const Navigation = () => {
               <NavLink><Link to="/groups">My Groups</Link></NavLink>
               <NavLink><Link to="/findGroups">Find Groups</Link></NavLink>
               <NavLink><Link to="/profile">Profile</Link></NavLink>
-              <NavLink><Link to="/login">Login</Link></NavLink>
+              {/* <NavLink><Link to="/login">Login</Link></NavLink> */}
             </Nav>
-            <Button color="primary" type="button" className="ml-3">Login</Button>
+            <Link to="/login">
+              <Button color="primary" type="button" className="ml-3">Login</Button>
+            </Link>
           </Container>
         </Navbar>
         <Switch>
