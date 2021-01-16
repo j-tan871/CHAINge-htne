@@ -3,7 +3,14 @@ from stellar_sdk import TransactionBuilder, Network, Keypair, Account, server, S
 # from stellar_base.transaction_envelope import TransactionEnvelope as Te
 from server.database import *
 
+secret = 'SAOXSBBKXTX473VXCKGTZMFFWVKPRSJFDJJRM4HZNQNCEO6WBJSASKI3'
+public = 'GCJ7MJH3YT7MSVCRM2UFS7WENL2562MUDCVEHXPUNKXVFHO53ZCSJO6J'
 
+chaingeCoin = Asset('chaingeCoin', public)
+
+print(chaingeCoin.type)
+
+secretSource = "SDYWLMJHFFGLWDZMQDXH63TAEPAIA6C6A3Q5IU4XC7ZLDZPKYHF3SMP7"
 
 root_keypair = Keypair.from_secret(secretSource)
 
