@@ -7,10 +7,16 @@ import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <div>
+    <div style={styles.general}>
       <Navigation />
     </div>
   );
+}
+
+const styles = {
+  general: {
+    fontFamily: 'Roboto Mono'
+  }
 }
 
 export default App;
