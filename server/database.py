@@ -1,6 +1,6 @@
 import requests
 from firebase import Firebase
-from stellar_sdk import TransactionBuilder, Network, Keypair, Account, server
+from stellar_sdk import TransactionBuilder, Network, Keypair, Account, server, Server
 
 # database config
 config = {
@@ -44,6 +44,8 @@ def get_public(username):
 
 def authenticate(username, password):
     results = db.child(username).get()
+    if not results.val():
+        return False
     for i in results.val():
         if results.val()[i]['password'] == password:
             return True
@@ -65,7 +67,18 @@ def create_user_hash(username, password):
     return add_to_db(username, password, data)
 
 
-def get_balance(username, password):
+def get_user_balance(username):
+    # kpdata = get_secret(username, password)
+    # # if kpdata == 'User not found':
+    # #     return "Transaction not valid, user not found"
+    # #
+    # root_keypair = Keypair.from_secret(kpdata)
+    # # root_account = Account(account_id=root_keypair.public_key, sequence=1)
+    # # return root_account.account()
+    crawl = server.Server(horizon_url='https://horizon-testnet.stellar.org/', client=None).accounts()
+    return crawl.account_id(get_public(username)).call()['balances'][0]['balance']
+
+def get_sequence(username, password):
     kpdata = get_secret(username, password)
     # if kpdata == 'User not found':
     #     return "Transaction not valid, user not found"
@@ -74,16 +87,17 @@ def get_balance(username, password):
     # root_account = Account(account_id=root_keypair.public_key, sequence=1)
     # return root_account.account()
     crawl = server.Server(horizon_url='https://horizon-testnet.stellar.org/', client=None).accounts()
-    return crawl.account_id(root_keypair.public_key).call()['balances'][0]['balance']
+    return int(crawl.account_id(root_keypair.public_key).call()['sequence'])
 
 
-def add_transaction(username, password, amt, destination):
+def process_transaction(username, password, amt, destination):
     kpdata = get_secret(username, password)
     if kpdata == 'User not found':
         return "Transaction not valid, user not found"
 
     root_keypair = Keypair.from_secret(kpdata)
-    root_account = Account(account_id=root_keypair.public_key, sequence=1)
+    root_account = Account(account_id=root_keypair.public_key, sequence = get_sequence(username, password))
+    server = Server(horizon_url ='https://horizon-testnet.stellar.org/', client = None )
 
     # todo: create DB for contracts so amt cant be hacked
     transaction = TransactionBuilder(
@@ -91,7 +105,7 @@ def add_transaction(username, password, amt, destination):
         network_passphrase=Network.TESTNET_NETWORK_PASSPHRASE,
         base_fee=100) \
         .append_payment_op(  # add a payment operation to the transaction
-        destination=destination,
+        destination=get_public(destination),
         asset_code="XLM",
         amount=amt) \
         .append_set_options_op(  # add a set options operation to the transaction
@@ -101,8 +115,3 @@ def add_transaction(username, password, amt, destination):
     transaction.sign(root_keypair)
     response = server.submit_transaction(transaction)
     return str(response)
-
-
-print(get_balance('test1', 'password'))
-print(get_secret('test1', 'password'))
-print(get_public('test1'))

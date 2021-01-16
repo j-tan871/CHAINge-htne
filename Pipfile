@@ -11,6 +11,7 @@ sseclient = "*"
 pycryptodome = "==3.4.3"
 stellar-sdk = "*"
 requests-toolbelt = "*"
+flask = "*"
 
 [dev-packages]
 

@@ -1,19 +1,36 @@
-from flask import Flask
+from flask import Flask, request
+from database import *
 import os
-
 
 app = Flask(__name__)
 
-@app.route('/createUser', methods = ['POST'])
+
+@app.route('/createUser', methods=['POST'])
 def create_user():
     data = request.json
     username = data['username']
     password = data['password']
+    create_user_hash(username, password)
+    return {"Status": True}
 
-@app.route('/getBalance', methods = ['GET'])
+
+@app.route('/getBalance', methods=['GET'])
 def get_balance():
     data = request.json
     username = data['username']
+    return get_user_balance(username)
+
+
+@app.route('/addTransaction', methods=["POST"])
+def add_transaction():
+    data = request.json
+    username = data['username']
+    password = data['password']
+    amt = str(data['amt'])
+    destination = data['destination']
+    process_transaction(username, password, amt, destination)
+    return "Success"
+
 
 if __name__ == "__main__":
     app.debug = True
