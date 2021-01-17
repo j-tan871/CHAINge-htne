@@ -44,19 +44,19 @@ const Shop = () => {
     fetchCoin();
   }, []);
 
-  const handleClick = async() => {
+  const handleClick = async(toSubtract) => {
     try {
       setLoading(true);
       const body = JSON.stringify({
         username: 'bryant',
         password: 'password',
-        amt: 20,
+        amt: toSubtract, 
         destination: 'admin'
       });
       const headers = {
         'Content-Type': 'application/json'
       };
-      const response = await fetch(`https://floating-refuge-48675.herokuapp.com/addTransaction`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/addTransaction`, {
         method: 'POST',
         body,
         headers
@@ -147,7 +147,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" onClick={handleClick}>Buy</Button>
+                  <Button color="primary" onClick={() => handleClick(10)}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
@@ -179,7 +179,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" onClick={handleClick}>Buy</Button>
+                  <Button color="primary" onClick={() => handleClick(50)}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
@@ -211,7 +211,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" onClick={handleClick}>Buy</Button>
+                  <Button color="primary" onClick={() => handleClick(100)}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
@@ -247,7 +247,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" onClick={handleClick}>Buy</Button>
+                  <Button color="primary" onClick={() => handleClick(130)}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
@@ -280,7 +280,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" onClick={handleClick}>Buy</Button>
+                  <Button color="primary" onClick={() => handleClick(150)}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
