@@ -5,6 +5,7 @@ import {
   Col,
   Input,
 } from 'reactstrap';
+import Fade from 'react-reveal/Fade';
 
 import GroupCard from '../components/GroupCard';
 import javascript from '../groupImgs/javascript.png';
@@ -120,37 +121,39 @@ const FindGroup= () => {
   }
 
   return (
-    <Container className="mt-5">
-      <Row className="mb-4">
-        <Col>
-          <h1 className="text-center">Find a Group</h1>
-          <p>Find your group that fits your interests. From environmental advocacy to diversity groups,
-            simply search for what you're interested and find your fit! There are groups for everyone. 
-            Collaborate, contribute, and be the CHAINge anywhere and everywhere.
-          </p>
-        </Col>
-      </Row>
-      <Row className="justify-content-md-center mb-4">
-        <Col lg="8">
-          <Input
-            placeholder="Search (ex: healthcare, climate, LGBTQ+)"
-            type="text"
-            value={search}
-            onChange={(event) => {setSearch(event.target.value);}}
-          />
-        </Col>
-      </Row>
-      <Row className="justify-content-md-center mb-5">
-        {
-          filter(groups).length === 0 ? <React.Fragment>No groups found. Try another keyword or group name!</React.Fragment> :
-          filter(groups).map((groupItem, index) => (
-            <Col className="order-lg-2 mt-4" lg="4">
-              <GroupCard key={index} name={groupItem.name} description={groupItem.description} tags={groupItem.tags} image={groupItem.img}/>
-            </Col>
-          ))
-        }
-      </Row>
-    </Container>
+    <Fade>
+      <Container className="mt-5">
+        <Row className="mb-4">
+          <Col>
+            <h1 className="text-center">Find a Group</h1>
+            <p>Find your group that fits your interests. From environmental advocacy to diversity groups,
+              simply search for what you're interested and find your fit! There are groups for everyone. 
+              Collaborate, contribute, and be the CHAINge anywhere and everywhere.
+            </p>
+          </Col>
+        </Row>
+        <Row className="justify-content-md-center mb-4">
+          <Col lg="8">
+            <Input
+              placeholder="Search (ex: healthcare, climate, LGBTQ+)"
+              type="text"
+              value={search}
+              onChange={(event) => {setSearch(event.target.value);}}
+            />
+          </Col>
+        </Row>
+        <Row className="justify-content-md-center mb-5">
+          {
+            filter(groups).length === 0 ? <React.Fragment>No groups found. Try another keyword or group name!</React.Fragment> :
+            filter(groups).map((groupItem, index) => (
+              <Col className="order-lg-2 mt-4" lg="4">
+                <GroupCard key={index} name={groupItem.name} description={groupItem.description} tags={groupItem.tags} image={groupItem.img}/>
+              </Col>
+            ))
+          }
+        </Row>
+      </Container>
+    </Fade>
   );
 }
 

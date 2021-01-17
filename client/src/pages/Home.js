@@ -4,11 +4,13 @@ import {
   Row
 } from 'reactstrap';
 import image from '../homebackground.jpg';
+import Fade from 'react-reveal/Fade';
+
 const screenHeight = window.innerHeight;
 
 const Home = () => {
   return (
-    <React.Fragment>
+    <Fade>
       <div style={{ height:100 }} className="d-flex justify-content-center">
         <h1>CHAINge: be the chainge you wish to see</h1>
       </div>
@@ -21,7 +23,7 @@ const Home = () => {
           </Row>
         </Container>
       </div>
-    </React.Fragment>
+    </Fade>
   );
 }
 
