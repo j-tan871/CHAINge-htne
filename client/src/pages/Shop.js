@@ -6,7 +6,15 @@ import {
   Card,
   CardBody,
   Button,
-  Spinner
+  Spinner,
+  CardTitle,
+  ListGroup, 
+  ListGroupItem, 
+  Badge, 
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
 } from 'reactstrap';
 import Fade from 'react-reveal/Fade';
 
@@ -79,8 +87,168 @@ const Shop = () => {
     }
   }
 
+  const [modal, setModal] = useState(false);
+  // const toggle = (toSubtract) => {
+  //   setCoin(toSubtract);
+  //   setModal(!modal);
+  // }
+
+  const toggle = () => setModal(!modal);
+
+  // const toggle = (toSubtract) => setModal(!modal);
+
+  const [toSubtract, setSubtract] = useState();
+
+  const confirm = (toSubtract) => {
+    handleClick(toSubtract);
+    toggle();
+  }
+
+
   return (
     <Fade>
+      <div>
+        {
+          toSubtract == 10 ?
+            <div>
+              <Modal isOpen={modal} toggle={toggle}>
+                <ModalHeader toggle={toggle}>
+                  <div className="text-center mt-2">
+                    <Row className="d-flex justify-content-center align-items-center mb-2">
+                      <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>Contributor</h4></span>
+                      <div className="icon icon-shape icon-shape-primary rounded-circle mb-2 ml-3">
+                        <i className="ni ni-money-coins m-2" />
+                      </div>
+                      <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>10</h4></span>
+                    </Row>
+                  </div>
+                  </ModalHeader>
+                  <ModalBody>
+                    <div style={{fontFamily: 'Roboto Mono'}}>
+                      Continue with your Contributor perks purchase                            
+                    </div>
+                  </ModalBody>
+                  <ModalFooter>
+                    <div style={{fontFamily: 'Roboto Mono'}}>
+                      <Button color="primary" onClick={() => confirm(10)}>Confirm</Button>
+                      <Button color="secondary" onClick={toggle}>Cancel</Button>                            
+                    </div>
+                  </ModalFooter>
+                </Modal>
+            </div>
+          : toSubtract == 50 ?
+            <div>
+              <Modal isOpen={modal} toggle={toggle} className="Modal2">
+                <ModalHeader toggle={toggle}>
+                  <div className="text-center mt-2">
+                    <Row className="d-flex justify-content-center align-items-center mb-2">
+                      <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>Plus</h4></span>
+                      <div className="icon icon-shape icon-shape-primary rounded-circle mb-2 ml-3">
+                        <i className="ni ni-money-coins m-2" />
+                      </div>
+                      <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>50</h4></span>
+                    </Row>
+                  </div>
+                  </ModalHeader>
+                  <ModalBody>
+                    <div style={{fontFamily: 'Roboto Mono'}}>
+                      Continue with your Plus perks purchase                            
+                    </div>
+                  </ModalBody>
+                  <ModalFooter>
+                    <div style={{fontFamily: 'Roboto Mono'}}>
+                      <Button color="primary" onClick={() => confirm(50)}>Confirm</Button>
+                      <Button color="secondary" onClick={toggle}>Cancel</Button>                            
+                    </div>
+                  </ModalFooter>
+                </Modal>
+            </div>
+          : toSubtract == 100 ?
+            <div>
+              <Modal isOpen={modal} toggle={toggle} className="Modal3">
+                <ModalHeader toggle={toggle}>
+                <div className="text-center mt-2">
+                  <Row className="d-flex justify-content-center align-items-center mb-2">
+                    <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>Pro</h4></span>
+                    <div className="icon icon-shape icon-shape-primary rounded-circle mb-2 ml-3">
+                      <i className="ni ni-money-coins m-2" />
+                    </div>
+                    <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>100</h4></span>
+                  </Row>
+                </div>
+                </ModalHeader>
+                <ModalBody>
+                  <div style={{fontFamily: 'Roboto Mono'}}>
+                    Continue with your Pro perks purchase                            
+                  </div>
+                </ModalBody>
+                <ModalFooter>
+                  <div style={{fontFamily: 'Roboto Mono'}}>
+                    <Button color="primary" onClick={() => confirm(100)}>Confirm</Button>
+                    <Button color="secondary" onClick={toggle}>Cancel</Button>                            
+                  </div>
+                </ModalFooter>
+              </Modal>               
+            </div>
+
+          : toSubtract == 130 ?
+            <div>
+              <Modal isOpen={modal} toggle={toggle} classNmae="Modal4">
+                <ModalHeader toggle={toggle}>
+                  <div className="text-center mt-2">
+                    <Row className="d-flex justify-content-center align-items-center mb-2">
+                      <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>Premier</h4></span>
+                      <div className="icon icon-shape icon-shape-primary rounded-circle mb-2 ml-3">
+                        <i className="ni ni-money-coins m-2" />
+                      </div>
+                      <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>130</h4></span>
+                    </Row>
+                  </div>
+                  </ModalHeader>
+                  <ModalBody>
+                    <div style={{fontFamily: 'Roboto Mono'}}>
+                      Continue with your Premier perks purchase                            
+                    </div>
+                  </ModalBody>
+                  <ModalFooter>
+                    <div style={{fontFamily: 'Roboto Mono'}}>
+                      <Button color="primary" onClick={() => confirm(130)}>Confirm</Button>
+                      <Button color="secondary" onClick={toggle}>Cancel</Button>                            
+                    </div>
+                  </ModalFooter>
+                </Modal>
+              </div>
+            
+          : toSubtract == 150 ?
+            <div>
+              <Modal isOpen={modal} toggle={toggle} className="Modal6">
+                <ModalHeader toggle={toggle}>
+                  <div className="text-center mt-2">
+                    <Row className="d-flex justify-content-center align-items-center mb-2">
+                      <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>Platinum</h4></span>
+                      <div className="icon icon-shape icon-shape-primary rounded-circle mb-2 ml-3">
+                        <i className="ni ni-money-coins m-2" />
+                      </div>
+                      <span className="ml-3"><h4 style={{fontFamily: 'Roboto Mono'}}>150</h4></span>
+                    </Row>
+                  </div>
+                  </ModalHeader>
+                  <ModalBody>
+                    <div style={{fontFamily: 'Roboto Mono'}}>
+                      Continue with your Platinum perks purchase                            
+                    </div>
+                  </ModalBody>
+                  <ModalFooter>
+                    <div style={{fontFamily: 'Roboto Mono'}}>
+                      <Button color="primary" onClick={() => confirm(150)}>Confirm</Button>
+                      <Button color="secondary" onClick={toggle}>Cancel</Button>                            
+                    </div>
+                  </ModalFooter>
+                </Modal>
+            </div>
+          : null
+        }
+      </div>
       <Container>
         <Row className="justify-content-md-center mt-5 mb-2">
           <h1>Shop with your CHAINge Coins</h1>
@@ -138,7 +306,9 @@ const Shop = () => {
                     </div>
                   </Row>
                   <Row className="d-flex justify-content-center mt-4">
-                    <Button color="primary" onClick={() => handleClick(10)}>Buy</Button>
+                    <div>
+                      <Button color="primary" onClick={() => {setSubtract(10); toggle();}}>Buy</Button>
+                    </div>
                   </Row>
                 </Container>
               </CardBody>
@@ -170,7 +340,9 @@ const Shop = () => {
                     </div>
                   </Row>
                   <Row className="d-flex justify-content-center mt-4">
-                    <Button color="primary" onClick={() => handleClick(50)}>Buy</Button>
+                  <div>
+                      <Button color="primary" onClick={() => {setSubtract(50); toggle();}}>Buy</Button>
+                    </div>
                   </Row>
                 </Container>
               </CardBody>
@@ -202,7 +374,9 @@ const Shop = () => {
                     </div>
                   </Row>
                   <Row className="d-flex justify-content-center mt-4">
-                    <Button color="primary" onClick={() => handleClick(100)}>Buy</Button>
+                  <div>
+                      <Button color="primary" onClick={() => {setSubtract(100); toggle();}}>Buy</Button>
+                    </div>
                   </Row>
                 </Container>
               </CardBody>
@@ -238,7 +412,9 @@ const Shop = () => {
                     </div>
                   </Row>
                   <Row className="d-flex justify-content-center mt-4">
-                    <Button color="primary" onClick={() => handleClick(130)}>Buy</Button>
+                  <div>
+                      <Button color="primary" onClick={() => {setSubtract(130); toggle();}}>Buy</Button>
+                    </div>
                   </Row>
                 </Container>
               </CardBody>
@@ -271,7 +447,9 @@ const Shop = () => {
                     </div>
                   </Row>
                   <Row className="d-flex justify-content-center mt-4">
-                    <Button color="primary" onClick={() => handleClick(150)}>Buy</Button>
+                  <div>
+                      <Button color="primary" onClick={() => {setSubtract(150); toggle();}}>Buy</Button>
+                    </div>
                   </Row>
                 </Container>
               </CardBody>
