@@ -24,7 +24,7 @@ const FindGroup= () => {
     [
       {
         "name": "Javascript FTW",
-        "description": "Our group creates and maintains websites and other apps in the healthcare space. Open to all experience levels",
+        "description": "Our group creates and maintains websites and other apps in the healthcare space. We're open to people of all experience levels.",
         "tags": [
           "healthcare", "web development"
         ],
@@ -33,7 +33,7 @@ const FindGroup= () => {
       },
       {
         "name": "The Hacker Group",
-        "description": "A group of volunteer white hat hackers. We throughly test ",
+        "description": "A group of volunteer white hat hackers. We throughly test code to ensure the security of any organization there is.",
         "tags": [
           "cybersecurity", "web development"
         ],
@@ -42,7 +42,7 @@ const FindGroup= () => {
       },
       {
         "name": "Global Initiative",
-        "description": "We are a worldwide group of volunteers dedicated to working on environmentally-focused initiatives, with a focus on rural and impoverished areas.",
+        "description": "A group of worldwide volunteers, dedicated to environmental initiatives with a focus on rural and impoverished areas.",
         "tags": [
           "environment", "worldwide"
         ],
@@ -51,7 +51,7 @@ const FindGroup= () => {
       },
       {
         "name": "Bakers United",
-        "description": "Just a group of chefs, foodies, and amatuer cooks making sure everyone is fed.",
+        "description": "Just a group of chefs, foodies, and amatuer cooks making sure everyone is fed. Any experience level is welcome to join.",
         "tags": [
           "food", "hunger"
         ],
@@ -68,8 +68,8 @@ const FindGroup= () => {
         'img':lgbtq
       },
       {
-        "name": "Healthcare Worker Support",
-        "description": "Giving back to healthcare workers, especially during Covid-19",
+        "name": "Healthy Giving",
+        "description": "Give back to healthcare workers by providing necessary support, supplies, and help, especially during Covid-19.",
         "tags": [
           "healthcare"
         ],
@@ -78,7 +78,7 @@ const FindGroup= () => {
       },
       {
         "name": "UN Volunteers",
-        "description": "To discuss curent volunteer opportunities listed by the United Nations",
+        "description": "To contribute and discuss curent volunteer opportunities listed by the United Nations and address any important issues.",
         "tags": [
           "healthcare", "worldwide"
         ],
@@ -87,9 +87,9 @@ const FindGroup= () => {
       },
       {
         "name": "Special Olympics",
-        "description": "Meet Special Olympics participants, coordinators, and volunteers here!",
+        "description": "Interested in the Speical Olympics and everything about it? Meet Special Olympics participants, coordinators, and volunteers here!",
         "tags": [
-          "Special Olympics",
+          "Special Olympics", 
           "worldwide"
         ],
         "keywords": "special olympics",
@@ -97,7 +97,7 @@ const FindGroup= () => {
       },
       {
         "name": "Collaborate Online",
-        "description": "Discussion board for online-only volunteer opportunities. Must have Contributor or above to post",
+        "description": "Discussion board for online-only volunteer opportunities about important issues and any ideas. Must have Contributor or above to post.",
         "tags": [
           "online", "worldwide"
         ],
@@ -124,7 +124,10 @@ const FindGroup= () => {
       <Row className="mb-4">
         <Col>
           <h1 className="text-center">Find a Group</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          <p>Find your group that fits your interests. From environmental advocacy to diversity groups,
+            simply search for what you're interested and find your fit! There are groups for everyone. 
+            Collaborate, contribute, and be the CHAINge anywhere and everywhere.
+          </p>
         </Col>
       </Row>
       <Row className="justify-content-md-center mb-4">
