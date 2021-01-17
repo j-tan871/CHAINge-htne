@@ -1,11 +1,15 @@
 from flask import Flask, request
 from database import *
 import os
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route('/createUser', methods=['POST'])
+@cross_origin()
 def create_user():
     data = request.json
     username = data['username']
@@ -15,6 +19,7 @@ def create_user():
 
 
 @app.route('/getBalance', methods=['GET'])
+@cross_origin()
 def get_balance():
     data = request.json
     # data = {'username':'bryant1',
@@ -24,6 +29,7 @@ def get_balance():
 
 
 @app.route('/addTransaction', methods=["POST"])
+@cross_origin()
 def add_transaction():
     data = request.json
     username = data['username']
@@ -34,17 +40,19 @@ def add_transaction():
     return "Success"
 
 @app.route('/publicKey', methods=['GET'])
+@cross_origin()
 def get_wallet():
     data = request.json
     username = data['username']
     return get_public(username)
 
 @app.route('/privateKey', methods = ['GET'])
+@cross_origin()
 def get_private():
     data= request.json
     username = data['username']
     password = data['password']
-    return get_private_key()
+    return get_secret(username, password)
 
 if __name__ == "__main__":
     app.debug = True

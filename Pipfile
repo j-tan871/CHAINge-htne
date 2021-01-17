@@ -13,6 +13,7 @@ stellar-sdk = "*"
 requests-toolbelt = "*"
 flask = "*"
 pipenv-to-requirements = "*"
+flask-cors = "*"
 
 [dev-packages]
 
