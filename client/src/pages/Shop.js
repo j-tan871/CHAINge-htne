@@ -28,10 +28,8 @@ const Shop = () => {
           body,
           headers
         });
-        console.log(response);
         const responseData = await response.json();
         setCoin(responseData);
-        console.log(coin);
       } catch(err) {
         console.log(err);
       }
@@ -56,7 +54,6 @@ const Shop = () => {
         body,
         headers
       });
-      console.log(response);
     } catch(err) {
       console.log(err);
       setLoading(false);
@@ -73,10 +70,8 @@ const Shop = () => {
         body,
         headers
       });
-      console.log(response);
       const responseData = await response.json();
       setCoin(responseData);
-      console.log(coin);
       setLoading(false);
     } catch(err) {
       console.log(err);
