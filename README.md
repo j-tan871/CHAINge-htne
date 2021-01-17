@@ -1,6 +1,10 @@
 # CHAINge
 A website that brings volunteers and nonprofits together to work for social change and inclusivity. Volunteers are rewarded for their hard work with CHAINgeCoin, a decentralized token based on the Stellar blockchain network, and gain perks for each task they complete with their group.
 
+Link: https://folding-297715.web.app/
+
+Devpost: https://devpost.com/software/chainge-uvmn19
+
 ## Inspiration
 CHAINge is a worldwide organization that strives to bring volunteers together and work for social change and inclusivity during the COVID-19 pandemic. We connect volunteers with non-profit organizations that need motivated individuals to help further their cause. Volunteers are rewarded for their hard work with CHAINgeCoin, a decentralized token based on the Stellar blockchain network, and gain perks for each task they complete with their group. 
 
@@ -18,7 +22,3 @@ To create this app, we used Firebase as a wallet database and for hosting the we
 
 ## What's next for CHAINge
 In the future, we plan on implementing more features of a social media site such as messaging and discussion posts to further facilitate collaboration within groups and also incorporate ways for groups to search for volunteers with relevant skills. We also plan on expanding the Stellar blockchain functionality by introducing a method for converting changecoin into monetary donations to nonprofits. 
-
-Link: https://folding-297715.web.app/
-
-Devpost: https://devpost.com/software/chainge-uvmn19
