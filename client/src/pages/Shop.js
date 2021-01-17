@@ -56,7 +56,7 @@ const Shop = () => {
       const headers = {
         'Content-Type': 'application/json'
       };
-      const response = await fetch(`https://floating-refuge-48675.herokuapp.com/addTransaction`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/addTransaction`, {
         method: 'POST', 
         body, 
         headers

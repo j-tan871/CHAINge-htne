@@ -3,7 +3,7 @@ import React from "react";
 // reactstrap components
 import { Button, Card, Container, Row, Col, Progress } from "reactstrap";
 
-import image from '../chases.jpeg';
+import image from '../images/chases.jpeg';
 
 class Profile extends React.Component {
   componentDidMount() {
