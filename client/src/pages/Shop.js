@@ -96,9 +96,10 @@ const Shop = () => {
       </Row>
       <Row>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Spend your CHAINgeCoins you have earned  and saved here to level up for additional perks in your group.
+          Earn perks such as priority registration, additional group features such as posting, and much more.
+          Earn CHAINgeCoins by joining and participating in group through things such as creating unique 
+          content and contributing to group tasks.
         </p>
       </Row>
       <Row className="d-flex justify-content-md-center mt-4 mb-5">
@@ -128,7 +129,7 @@ const Shop = () => {
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
                   </div>
-                  <span className="ml-3"><h2>20</h2></span>
+                  <span className="ml-3"><h2>10</h2></span>
                 </Row>
                   <div className="text-center mt-2">
                     <div className="h5 font-weight-400">
@@ -158,7 +159,7 @@ const Shop = () => {
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
                   </div>
-                  <span className="ml-3"><h2>20</h2></span>
+                  <span className="ml-3"><h2>50</h2></span>
                 </Row>
                   <div className="text-center mt-2">
                     <div className="h5 font-weight-400">
@@ -167,7 +168,7 @@ const Shop = () => {
                     </div>
                   </div>
                 <Row>
-                  <div tag="h6" className="mt-2 text-muted text">
+                  <div tag="h6" className="mt-1 ml-2 text-muted text">
                     <ul>
                         <li>All Contributor perks</li>
                         <li>2 weeks priority in being chosen for a project</li>
@@ -190,18 +191,21 @@ const Shop = () => {
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
                   </div>
-                  <span className="ml-3"><h2>20</h2></span>
+                  <span className="ml-3"><h2>100</h2></span>
                 </Row>
                   <div className="text-center mt-2">
                     <div className="h5 font-weight-400">
                       <i className="ni location_pin mr-2" />
-                      Award Non-profit
+                      Pro
                     </div>
                   </div>
                 <Row>
-                  <div tag="h6" className="mb-2 text-muted text-center text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <div tag="h6" className="mt-1 ml-2 text-muted text">
+                    <ul>
+                        <li>All Plus perks</li>
+                        <li>4 weeks priority in being chosen for a project</li>
+                        <li>Direct non-profit chat line</li>
+                    </ul>
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
@@ -221,21 +225,23 @@ const Shop = () => {
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
                   </div>
-                  <span className="ml-3"><h2>20</h2></span>
+                  <span className="ml-3"><h2>130</h2></span>
                   
                   </Row> 
                     <div className="text-center mt-0">
                       <div className="h2 font-weight-400">
                         <i className="ni location_pin mr-2" />
-                        Award Non-profit
+                        Premier
                       </div>
                     </div>
                   <Row>
                 </Row>
                 <Row>
-                  <div tag="h6" className="mb-2 text-muted text-center text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <div tag="h6" className="mt-2 ml-5 text-muted text">
+                    <ul>
+                        <li>All Pro perks</li>
+                        <li>Ability to add features to your group</li>
+                    </ul>
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
@@ -253,20 +259,22 @@ const Shop = () => {
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
                   </div>
-                  <span className="ml-3"><h2>20</h2></span>
+                  <span className="ml-3"><h2>150</h2></span>
                   </Row>
                     <div className="text-center mt-0">
                       <div className="h2 font-weight-400">
                         <i className="ni location_pin mr-2" />
-                        VIP
+                        Platinum
                       </div>
                     </div>
                   <Row>
                 </Row>
                 <Row>
-                  <div tag="h6" className="mb-2 text-muted text-center text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <div tag="h6" className="mt-2 ml-5 text-muted text">
+                    <ul>
+                        <li>All Premier perks</li>
+                        <li>Ability to pitch upcoming project ideas</li>
+                    </ul>
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">

@@ -21,14 +21,15 @@ const Group = () => {
   return (
     <Container>
       <Row className="justify-content-md-center mt-5 mb-2">
-        <h1>Group Name</h1>
+        <h1>Protect the Pups</h1>
       </Row>
       <Row>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          We are a worldwide group of volunteers dedicated to working on canine-focused initiatives, with a focus on fighting animal cruelty and neglect.
         </p>
+      </Row>
+      <Row className="justify-content-md-center mt-5 mb-2">
+        <h1>Group Stats</h1>
       </Row>
       <Row className="d-flex justify-content-md-center mt-3">
         <Col lg="3">
@@ -139,10 +140,10 @@ const Group = () => {
             <CardTitle className="ml-3 mr-3 mt-4 d-flex justify-content-md-center" tag="h4">Members</CardTitle>
             <CardBody>
               <ListGroup>
-                <ListGroupItem>Kendra Huang<Badge pill className="ml-2 bg-info">hi</Badge></ListGroupItem>
-                <ListGroupItem>Bryant Hou<Badge pill className="ml-2 bg-success">hi</Badge></ListGroupItem>
-                <ListGroupItem>Raghav Sriram<Badge pill className="ml-2 bg-warning">hi</Badge></ListGroupItem>
-                <ListGroupItem>Jenny Tan<Badge pill className="ml-2 bg-danger">hi</Badge></ListGroupItem>
+                <ListGroupItem>Kendra Huang<Badge pill className="ml-2 bg-info">Premier</Badge></ListGroupItem>
+                <ListGroupItem>Bryant Hou<Badge pill className="ml-2 bg-success">Platinum</Badge></ListGroupItem>
+                <ListGroupItem>Raghav Sriram<Badge pill className="ml-2 bg-warning">Pro</Badge></ListGroupItem>
+                <ListGroupItem>Jenny Tan<Badge pill className="ml-2 bg-danger">Contributor</Badge></ListGroupItem>
               </ListGroup>
             </CardBody>
           </Card>

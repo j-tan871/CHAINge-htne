@@ -3,7 +3,7 @@ import React from "react";
 // reactstrap components
 import { Button, Card, Container, Row, Col, Progress } from "reactstrap";
 
-import image from '../hehe.jpg';
+import image from '../chases.jpeg';
 
 class Profile extends React.Component {
   componentDidMount() {
@@ -89,20 +89,20 @@ class Profile extends React.Component {
                   </Row>
                   <div className="text-center mt-5">
                     <h3>
-                      Iroh
+                      Chase Stevenson
                       <span className="font-weight-light">, 27</span>
                     </h3>
                     <div className="h6 font-weight-300">
                       <i className="ni location_pin mr-2" />
-                      Bucharest, Romania
+                      Atlanta, Georgia
                     </div>
                     <div className="h6 mt-4">
                       <i className="ni business_briefcase-24 mr-2" />
-                      Solution Manager - Creative Tim Officer
+                      Protect the Pups
                     </div>
                     <div>
                       <i className="ni education_hat mr-2" />
-                      University of Computer Science
+                      Treasurer
                     </div>
                     <div className="card-profile-actions py-4 mt-lg-0">
                         <Button
@@ -120,11 +120,9 @@ class Profile extends React.Component {
                     <Row className="justify-content-center">
                       <Col lg="9">
                         <p>
-                        Lorem ipsum dolor sit amet, 
-                        consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                        nisi ut aliquip ex ea commodo consequat.
+                        Hi, I'm Chase, the treasurer for Protect the Pups. I'm responsible for all things money
+                        and mediate tasks including fundraising, financial budgeting and planning and record keeping.
+                        Please feel free to send me a message if you have any questions about Protect the Pups or for me!
                         </p>
                       </Col>
                     </Row>
