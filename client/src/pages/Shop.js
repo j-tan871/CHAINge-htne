@@ -273,7 +273,7 @@ const Shop = () => {
               <i className="ni ni-money-coins m-2" />
             </div>
             <a target="_blank" href="https://stellar.expert/explorer/testnet/account/GDF7RYDHS4PQ4XNHT3GUFROCKGOKQTKPO2MQ3TQINWNFGLHTRXWDSYGR">
-            <Button color="primary">View Wallet</Button></a>
+            <Button className="mt--2" color="primary">View Wallet</Button></a>
           </Row>
         </Row>
         {
