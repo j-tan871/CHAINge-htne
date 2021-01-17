@@ -61,7 +61,7 @@ const Group = () => {
               </div>
               <span className="ml-3"><h2>20</h2></span>
             </CardBody>
-            <CardTitle className="ml-3 mr-3 d-flex justify-content-md-center">chaingeCoin Earned</CardTitle>
+            <CardTitle className="ml-3 mr-3 d-flex justify-content-md-center">CHAINgeCoins Earned</CardTitle>
           </Card>
         </Col>
         <Col lg="3">

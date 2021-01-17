@@ -74,7 +74,7 @@ class Profile extends React.Component {
                       <div className="card-profile-stats d-flex justify-content-center">
                         <div>
                           <span className="heading">22</span>
-                          <span className="description">Coins</span>
+                          <span className="description">Coin Balance</span>
                         </div>
                         <div>
                           <span className="heading">10</span>
