@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   Container, 
@@ -11,17 +11,89 @@ import {
   ListGroup, 
   ListGroupItem, 
   Badge, 
-  Button
+  Button, 
+  Spinner
 } from 'reactstrap';
 
-//import './ShopCard.css';
-
 const Shop = () => {
+  const [coin, setCoin] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchCoin = async() => {
+      try {
+        const body = JSON.stringify({
+          username: 'bryant'
+        });
+        const headers = {
+          'Content-Type': 'application/json'
+        };
+        const response = await fetch(`https://floating-refuge-48675.herokuapp.com/getBalance`, {
+          method: 'POST', 
+          body, 
+          headers
+        });
+        console.log(response);
+        const responseData = await response.json();
+        setCoin(responseData);
+        console.log(coin);
+      } catch(err) {
+        console.log(err);
+      }
+    }
+    fetchCoin();
+  }, []);
+
+  const handleClick = async() => {
+    try {
+      setLoading(true);
+      const body = JSON.stringify({
+        username: 'bryant', 
+        password: 'password', 
+        amt: 20, 
+        destination: 'admin'
+      });
+      const headers = {
+        'Content-Type': 'application/json'
+      };
+      const response = await fetch(`https://floating-refuge-48675.herokuapp.com/addTransaction`, {
+        method: 'POST', 
+        body, 
+        headers
+      });
+      console.log(response);
+    } catch(err) {
+      console.log(err);
+      setLoading(false);
+    }
+    try {
+      const body = JSON.stringify({
+        username: 'bryant'
+      });
+      const headers = {
+        'Content-Type': 'application/json'
+      };
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/getBalance`, {
+        method: 'POST', 
+        body, 
+        headers
+      });
+      console.log(response);
+      const responseData = await response.json();
+      setCoin(responseData);
+      console.log(coin);
+      setLoading(false);
+    } catch(err) {
+      console.log(err);
+      setLoading(false);
+    }
+  }
 
   return (
     <Container>
       <Row className="justify-content-md-center mt-5 mb-2">
         <h1>Shop with your CHAINge Coins</h1>
+        <div>{coin}</div>
       </Row>
       <Row>
         <p>
@@ -30,7 +102,11 @@ const Shop = () => {
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
       </Row>
-
+      {
+        loading ? <Row className="justify-content-md-center mt-5 mb-2">
+            <Spinner color="primary" />
+          </Row> : null
+      }
       <Row className="d-flex justify-content-md-center mt-3">
         <Col lg="4">
           <Card className="card-lift--hover shadow border-0">
@@ -55,7 +131,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" >Buy</Button>
+                  <Button color="primary" onClick={handleClick}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
@@ -84,7 +160,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" >Buy</Button>
+                  <Button color="primary" onClick={handleClick}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
@@ -113,7 +189,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" >Buy</Button>
+                  <Button color="primary" onClick={handleClick}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
@@ -147,7 +223,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" >Buy</Button>
+                  <Button color="primary" onClick={handleClick}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
@@ -178,7 +254,7 @@ const Shop = () => {
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
-                  <Button color="primary" >Buy</Button>
+                  <Button color="primary" onClick={handleClick}>Buy</Button>
                 </Row>
               </Container>
             </CardBody>
