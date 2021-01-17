@@ -1,15 +1,15 @@
 import React from 'react';
 import {
-  Container, 
-  Row, 
-  Col, 
-  Card, 
-  CardText, 
+  Container,
+  Row,
+  Col,
+  Card,
+  CardText,
   CardBody,
   CardTitle,
-  ListGroup, 
-  ListGroupItem, 
-  Badge, 
+  ListGroup,
+  ListGroupItem,
+  Badge,
   Input,
   InputGroupAddon,
   InputGroupText,
@@ -91,7 +91,7 @@ const Group = () => {
                       type="checkbox"
                     />
                     <label className="custom-control-label" htmlFor="customCheck1">
-                      Task 1
+                      Find a forever home for Jefferie.
                     </label>
                   </div>
                 </ListGroupItem>
@@ -103,7 +103,7 @@ const Group = () => {
                       type="checkbox"
                     />
                     <label className="custom-control-label" htmlFor="customCheck2">
-                      Task 2
+                      Migrate pet shot db to noSQL (@Kendra).
                     </label>
                   </div>
                 </ListGroupItem>
@@ -115,7 +115,7 @@ const Group = () => {
                       type="checkbox"
                     />
                     <label className="custom-control-label" htmlFor="customCheck3">
-                      Task 3
+                      Set up bake sale fundraiser. NO NUTS
                     </label>
                   </div>
                 </ListGroupItem>
@@ -127,7 +127,7 @@ const Group = () => {
                       type="checkbox"
                     />
                     <label className="custom-control-label" htmlFor="customCheck4">
-                      Task 4
+                      Investigate leads in top secret folder.
                     </label>
                   </div>
                 </ListGroupItem>
