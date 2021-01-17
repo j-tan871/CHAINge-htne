@@ -32,7 +32,7 @@ const Navigation = () => {
         >
           <Container>
             <NavbarBrand onClick={e => e.preventDefault()}>
-              <Link to="/" style={styles.navLink}><img alt="logo" src={logo}/></Link>
+              <Link to="/" style={styles.navLink}><img alt="logo" src={logo} style={styles.img}/></Link>
             </NavbarBrand>
             <Nav className="ml-lg-auto">
               <NavLink><Link to="/groups" style={styles.navLink}>My Group</Link></NavLink>
@@ -72,8 +72,12 @@ const Navigation = () => {
 
 const styles = {
   navLink: {
-    color: '#525f7f', 
+    color: '#525f7f',
     fontSize: 16
+},
+  img:{
+    height:'110px',
+    width:'auto'
   }
 }
 
