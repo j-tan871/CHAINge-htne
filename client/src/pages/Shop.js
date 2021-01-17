@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
 import {
-  Container, 
-  Row, 
-  Col, 
-  Card, 
-  CardText, 
+  Container,
+  Row,
+  Col,
+  Card,
+  CardText,
   CardBody,
   CardTitle,
-  ListGroup, 
-  ListGroupItem, 
-  Badge, 
-  Button, 
+  ListGroup,
+  ListGroupItem,
+  Badge,
+  Button,
   Spinner
 } from 'reactstrap';
 
@@ -29,8 +29,8 @@ const Shop = () => {
           'Content-Type': 'application/json'
         };
         const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/getBalance`, {
-          method: 'POST', 
-          body, 
+          method: 'POST',
+          body,
           headers
         });
         console.log(response);
@@ -48,17 +48,17 @@ const Shop = () => {
     try {
       setLoading(true);
       const body = JSON.stringify({
-        username: 'bryant', 
-        password: 'password', 
-        amt: 20, 
+        username: 'bryant',
+        password: 'password',
+        amt: 20,
         destination: 'admin'
       });
       const headers = {
         'Content-Type': 'application/json'
       };
       const response = await fetch(`https://floating-refuge-48675.herokuapp.com/addTransaction`, {
-        method: 'POST', 
-        body, 
+        method: 'POST',
+        body,
         headers
       });
       console.log(response);
@@ -74,8 +74,8 @@ const Shop = () => {
         'Content-Type': 'application/json'
       };
       const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/getBalance`, {
-        method: 'POST', 
-        body, 
+        method: 'POST',
+        body,
         headers
       });
       console.log(response);
@@ -98,7 +98,7 @@ const Shop = () => {
         <p>
           Spend your CHAINgeCoins you have earned  and saved here to level up for additional perks in your group.
           Earn perks such as priority registration, additional group features such as posting, and much more.
-          Earn CHAINgeCoins by joining and participating in group through things such as creating unique 
+          Earn CHAINgeCoins by joining and participating in group through things such as creating unique
           content and contributing to group tasks.
         </p>
       </Row>
@@ -106,13 +106,15 @@ const Shop = () => {
         <Row className="d-flex justify-content-center align-items-center mb-2">
           <div className="text-center mt-0 mr-3">
             <h3>
-              CHAINgeCoin Balance: 
+              CHAINgeCoin Balance:
             </h3>
           </div>
           <span className="ml-1 mr-3"><h2>{coin}</h2></span>
           <div className="icon icon-shape icon-shape-primary rounded-circle mb-10 mr-3 mb-2">
             <i className="ni ni-money-coins m-2" />
           </div>
+          <a target="_blank" href="https://stellar.expert/explorer/testnet/account/GDF7RYDHS4PQ4XNHT3GUFROCKGOKQTKPO2MQ3TQINWNFGLHTRXWDSYGR">
+          <Button color="primary">View Wallet</Button></a>
         </Row>
       </Row>
       {
@@ -124,7 +126,7 @@ const Shop = () => {
         <Col lg="4">
           <Card className="card-lift--hover shadow border-0">
             <CardBody className="d-flex justify-content-md-center">
-              <Container> 
+              <Container>
                 <Row className="d-flex justify-content-center align-items-center mb-2">
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
@@ -154,7 +156,7 @@ const Shop = () => {
         <Col lg="4">
           <Card className="card-lift--hover shadow border-0">
             <CardBody className="d-flex justify-content-md-center">
-              <Container> 
+              <Container>
                 <Row className="d-flex justify-content-center align-items-center mb-2">
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
@@ -186,7 +188,7 @@ const Shop = () => {
         <Col lg="4">
           <Card className="card-lift--hover shadow border-0">
             <CardBody className="d-flex justify-content-md-center">
-              <Container> 
+              <Container>
                 <Row className="d-flex justify-content-center align-items-center mb-2">
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
@@ -220,14 +222,14 @@ const Shop = () => {
         <Col lg="6">
         <Card className="card-lift--hover shadow border-0">
             <CardBody>
-              <Container> 
+              <Container>
                 <Row className="d-flex justify-content-center align-items-center mb-2">
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
                   </div>
                   <span className="ml-3"><h2>130</h2></span>
-                  
-                  </Row> 
+
+                  </Row>
                     <div className="text-center mt-0">
                       <div className="h2 font-weight-400">
                         <i className="ni location_pin mr-2" />
@@ -254,7 +256,7 @@ const Shop = () => {
         <Col lg="6">
         <Card className="card-lift--hover shadow border-0">
             <CardBody>
-              <Container> 
+              <Container>
                 <Row className="d-flex justify-content-center align-items-center mb-2">
                   <div className="icon icon-shape icon-shape-primary rounded-circle mb-2">
                     <i className="ni ni-money-coins m-2" />
