@@ -22,3 +22,5 @@ To create this app, we used Firebase as a wallet database and for hosting the we
 
 ## What's next for CHAINge
 In the future, we plan on implementing more features of a social media site such as messaging and discussion posts to further facilitate collaboration within groups and also incorporate ways for groups to search for volunteers with relevant skills. We also plan on expanding the Stellar blockchain functionality by introducing a method for converting changecoin into monetary donations to nonprofits. 
+
+*code for Stellar transactions, database, and Flask server are in branch "backend"*
