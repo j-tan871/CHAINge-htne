@@ -1,13 +1,6 @@
 import React from "react";
-import { 
-  Button, 
-  Card, 
-  Container, 
-  Row, 
-  Col, 
-  Progress 
-} from "reactstrap";
-import Fade from 'react-reveal/Fade';
+import { Button, Card, Container, Row, Col, Progress } from "reactstrap";
+import Fade from "react-reveal/Fade";
 
 import image from '../images/chases.jpeg';
 
@@ -79,10 +72,6 @@ class Profile extends React.Component {
                       </Col>
                       <Col className="order-lg-1" lg="4">
                         <div className="card-profile-stats d-flex justify-content-center">
-                          <div>
-                            <span className="heading">22</span>
-                            <span className="description">Coin Balance</span>
-                          </div>
                           <div>
                             <span className="heading">10</span>
                             <span className="description">Tasks Completed</span>
