@@ -16,7 +16,7 @@ import {
 } from 'reactstrap';
 
 const Shop = () => {
-  const [coin, setCoin] = useState(0);
+  const [coin, setCoin] = useState('Loading...');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Shop = () => {
         const headers = {
           'Content-Type': 'application/json'
         };
-        const response = await fetch(`https://floating-refuge-48675.herokuapp.com/getBalance`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/getBalance`, {
           method: 'POST', 
           body, 
           headers
@@ -93,7 +93,6 @@ const Shop = () => {
     <Container>
       <Row className="justify-content-md-center mt-5 mb-2">
         <h1>Shop with your CHAINge Coins</h1>
-        <div>{coin}</div>
       </Row>
       <Row>
         <p>
@@ -102,8 +101,21 @@ const Shop = () => {
           dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
       </Row>
+      <Row className="d-flex justify-content-md-center mt-4 mb-5">
+        <Row className="d-flex justify-content-center align-items-center mb-2">
+          <div className="text-center mt-0 mr-3">
+            <h3>
+              CHAINgeCoin Balance: 
+            </h3>
+          </div>
+          <span className="ml-1 mr-3"><h2>{coin}</h2></span>
+          <div className="icon icon-shape icon-shape-primary rounded-circle mb-10 mr-3 mb-2">
+            <i className="ni ni-money-coins m-2" />
+          </div>
+        </Row>
+      </Row>
       {
-        loading ? <Row className="justify-content-md-center mt-5 mb-2">
+        loading ? <Row className="justify-content-md-center mt-1 mb-5">
             <Spinner color="primary" />
           </Row> : null
       }
@@ -121,13 +133,14 @@ const Shop = () => {
                   <div className="text-center mt-2">
                     <div className="h5 font-weight-400">
                       <i className="ni location_pin mr-2" />
-                      Award Non-profit
+                      Contributor
                     </div>
                   </div>
                 <Row>
-                  <div tag="h6" className="mb-2 text-muted text-center text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <div tag="h6" className="ml-3 mr-2 mt-4 mb-3 text-muted text">
+                    <ul>
+                        <li>1 week priority in being chosen for a project</li>
+                    </ul>
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
@@ -150,13 +163,16 @@ const Shop = () => {
                   <div className="text-center mt-2">
                     <div className="h5 font-weight-400">
                       <i className="ni location_pin mr-2" />
-                      Award Non-profit
+                      Plus
                     </div>
                   </div>
                 <Row>
-                  <div tag="h6" className="mb-2 text-muted text-center text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  <div tag="h6" className="mt-2 text-muted text">
+                    <ul>
+                        <li>All Contributor perks</li>
+                        <li>2 weeks priority in being chosen for a project</li>
+                        <li>Profile badge</li>
+                    </ul>
                   </div>
                 </Row>
                 <Row className="d-flex justify-content-center mt-4">
@@ -209,7 +225,7 @@ const Shop = () => {
                   
                   </Row> 
                     <div className="text-center mt-0">
-                      <div className="h5 font-weight-400">
+                      <div className="h2 font-weight-400">
                         <i className="ni location_pin mr-2" />
                         Award Non-profit
                       </div>
@@ -240,9 +256,9 @@ const Shop = () => {
                   <span className="ml-3"><h2>20</h2></span>
                   </Row>
                     <div className="text-center mt-0">
-                      <div className="h5 font-weight-400">
+                      <div className="h2 font-weight-400">
                         <i className="ni location_pin mr-2" />
-                        Award Non-profit
+                        VIP
                       </div>
                     </div>
                   <Row>
