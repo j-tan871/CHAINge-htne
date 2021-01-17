@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {
-  Container, 
+  Container,
   Row,
-  Col, 
+  Col,
   Input,
 } from 'reactstrap';
 
@@ -14,77 +14,78 @@ const FindGroup= () => {
   const [groups, setGroups] = useState(
     [
       {
-        "name": "Group One", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "Javascript FTW",
+        "description": "Our group creates and maintains websites and other apps in the healthcare space. Open to all experience levels",
         "tags": [
-          "healthcare", "disability justice"
-        ], 
-        "keywords": "healthcare disability justice"
-      }, 
+          "healthcare", "web development"
+        ],
+        "keywords": "healthcare web website development"
+      },
       {
-        "name": "Group Two", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "The Hacker Group",
+        "description": "A group of volunteer white hat hackers. We throughly test ",
         "tags": [
-          "LGBTQ+ empowerment" 
-        ], 
+          "cybersecurity", "web development"
+        ],
         "keywords": "LGBTQ+ empowerment"
-      }, 
+      },
       {
-        "name": "Group Three", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "Global Initiative",
+        "description": "We are a worldwide group of volunteers dedicated to working on environmentally-focused initiatives, with a focus on rural and impoverished areas.",
         "tags": [
-          "environment", "decolonization"
-        ], 
-        "keywords": "environment decolonization"
-      }, 
+          "environment", "worldwide"
+        ],
+        "keywords": "environment world"
+      },
       {
-        "name": "Group Four", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "Bakers United",
+        "description": "Just a group of chefs, foodies, and amatuer cooks making sure everyone is fed.",
         "tags": [
-          "healthcare", "disability justice"
-        ], 
-        "keywords": "healthcare disability justice"
-      }, 
+          "food", "hunger"
+        ],
+        "keywords": "food hunger"
+      },
       {
-        "name": "Group Five", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "LGBTQ+s for Social Good",
+        "description": "A LGBTQ+ empowerment group. Our mission is to promote LGBTQ+ through social improvement. Open to all allys!",
         "tags": [
           "LGBTQ+ empowerment"
-        ], 
+        ],
         "keywords": "LGBTQ+ empowerment"
-      }, 
+      },
       {
-        "name": "Group Six", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "Healthcare Worker Support",
+        "description": "Giving back to healthcare workers, especially during Covid-19",
         "tags": [
-          "environment","decolonization"
-        ], 
-        "keywords": "environment decolonization"
-      }, 
+          "healthcare"
+        ],
+        "keywords": "healthcare covid"
+      },
       {
-        "name": "Group Seven", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "UN Volunteers",
+        "description": "To discuss curent volunteer opportunities listed by the United Nations",
         "tags": [
-          "healthcare", "disability justice"
-        ], 
-        "keywords": "healthcare disability justice"
-      }, 
+          "healthcare", "worldwide"
+        ],
+        "keywords": "united nations"
+      },
       {
-        "name": "Group Eight", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "Special Olympics",
+        "description": "Meet Special Olympics participants, coordinators, and volunteers here!",
         "tags": [
-          "LGBTQ+ empowerment"
-        ], 
-        "keywords": "LGBTQ+ empowerment"
-      }, 
+          "Special Olympics",
+          "worldwide"
+        ],
+        "keywords": "special olympics"
+      },
       {
-        "name": "Group Nine", 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "name": "Collaborate Online",
+        "description": "Discussion board for online-only volunteer opportunities. Must have Contributor or above to post",
         "tags": [
-          "environment", "decolonization"
-        ], 
-        "keywords": "environment decolonization"
-      }, 
+          "online", "worldwide"
+        ],
+        "keywords": "online team worldwide"
+      },
     ]
   );
 
@@ -110,8 +111,8 @@ const FindGroup= () => {
       </Row>
       <Row className="justify-content-md-center mb-4">
         <Col lg="8">
-          <Input 
-            placeholder="Search (ex: healthcare, climate, LGBTQ+)" 
+          <Input
+            placeholder="Search (ex: healthcare, climate, LGBTQ+)"
             type="text"
             value={search}
             onChange={(event) => {setSearch(event.target.value);}}
@@ -120,7 +121,7 @@ const FindGroup= () => {
       </Row>
       <Row className="justify-content-md-center mb-5">
         {
-          filter(groups).length === 0 ? <React.Fragment>No groups found. Try another keyword or group name!</React.Fragment> : 
+          filter(groups).length === 0 ? <React.Fragment>No groups found. Try another keyword or group name!</React.Fragment> :
           filter(groups).map((groupItem, index) => (
             <Col className="order-lg-2 mt-4" lg="4">
               <GroupCard key={index} name={groupItem.name} description={groupItem.description} tags={groupItem.tags} image={image}/>
