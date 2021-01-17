@@ -37,7 +37,7 @@ const FindGroup= () => {
         "tags": [
           "cybersecurity", "web development"
         ],
-        "keywords": "LGBTQ+ empowerment",
+        "keywords": "cybersecurity web development",
         "img": hacker
       },
       {
@@ -46,7 +46,7 @@ const FindGroup= () => {
         "tags": [
           "environment", "worldwide"
         ],
-        "keywords": "environment world",
+        "keywords": "environment world worldwide",
         "img" : globe
       },
       {
@@ -82,7 +82,7 @@ const FindGroup= () => {
         "tags": [
           "healthcare", "worldwide"
         ],
-        "keywords": "united nations",
+        "keywords": "united nations healthcare worldwide",
         "img":un
       },
       {
@@ -92,7 +92,7 @@ const FindGroup= () => {
           "Special Olympics", 
           "worldwide"
         ],
-        "keywords": "special olympics",
+        "keywords": "special olympics worldwide",
         "img":olympics
       },
       {
