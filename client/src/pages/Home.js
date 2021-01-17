@@ -16,10 +16,15 @@ const Home = () => {
       </div>
       <div style={{...styles.window, alignItems: 'center', marginTop: 0, backgroundImage: `url(${image})`, backgroundRepeat:"no-repeat", backgroundPosition: "center", backgroundSize: "absolute" }}></div>
       <div style={ styles.window }>
-        <Container>
+        <Container className="mt-5">
           <Row>
-            <h1 className="mt-4">About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1 className="mt-5">About Us</h1>
+            <p>
+              CHAINge is a worldwide organization that strives to bring volunteers together and work for social change and inclusivity 
+              during the COVID-19 pandemic. We connect volunteers with non-profit organizations that need motivated individuals to help 
+              further their cause. Volunteers are rewarded for their hard work with CHAINgeCoin, a decentralized token based on the Stellar 
+              blockchain network, and gain perks for each task they complete with their group. 
+            </p>
           </Row>
         </Container>
       </div>
