@@ -7,7 +7,16 @@ import {
 } from 'reactstrap';
 
 import GroupCard from '../components/GroupCard';
-import image from '../hehe.jpg';
+import javascript from '../groupImgs/javascript.png';
+import hacker from '../groupImgs/hacker.jpg';
+import health from '../groupImgs/health.png';
+import globe from '../groupImgs/globe.png';
+import toast from '../groupImgs/toast.png';
+import lgbtq from '../groupImgs/lgbtq.png';
+import un from '../groupImgs/un.svg';
+import web from '../groupImgs/web.png';
+import olympics from '../groupImgs/olympics.jpg';
+
 
 const FindGroup= () => {
   const [search, setSearch] = useState('');
@@ -19,7 +28,8 @@ const FindGroup= () => {
         "tags": [
           "healthcare", "web development"
         ],
-        "keywords": "healthcare web website development"
+        "keywords": "healthcare web website development",
+        "img":javascript
       },
       {
         "name": "The Hacker Group",
@@ -27,7 +37,8 @@ const FindGroup= () => {
         "tags": [
           "cybersecurity", "web development"
         ],
-        "keywords": "LGBTQ+ empowerment"
+        "keywords": "LGBTQ+ empowerment",
+        "img": hacker
       },
       {
         "name": "Global Initiative",
@@ -35,7 +46,8 @@ const FindGroup= () => {
         "tags": [
           "environment", "worldwide"
         ],
-        "keywords": "environment world"
+        "keywords": "environment world",
+        "img" : globe
       },
       {
         "name": "Bakers United",
@@ -43,7 +55,8 @@ const FindGroup= () => {
         "tags": [
           "food", "hunger"
         ],
-        "keywords": "food hunger"
+        "keywords": "food hunger",
+        "img":toast
       },
       {
         "name": "LGBTQ+s for Social Good",
@@ -51,7 +64,8 @@ const FindGroup= () => {
         "tags": [
           "LGBTQ+ empowerment"
         ],
-        "keywords": "LGBTQ+ empowerment"
+        "keywords": "LGBTQ+ empowerment",
+        'img':lgbtq
       },
       {
         "name": "Healthcare Worker Support",
@@ -59,7 +73,8 @@ const FindGroup= () => {
         "tags": [
           "healthcare"
         ],
-        "keywords": "healthcare covid"
+        "keywords": "healthcare covid",
+        "img":health
       },
       {
         "name": "UN Volunteers",
@@ -67,7 +82,8 @@ const FindGroup= () => {
         "tags": [
           "healthcare", "worldwide"
         ],
-        "keywords": "united nations"
+        "keywords": "united nations",
+        "img":un
       },
       {
         "name": "Special Olympics",
@@ -76,7 +92,8 @@ const FindGroup= () => {
           "Special Olympics",
           "worldwide"
         ],
-        "keywords": "special olympics"
+        "keywords": "special olympics",
+        "img":olympics
       },
       {
         "name": "Collaborate Online",
@@ -84,7 +101,8 @@ const FindGroup= () => {
         "tags": [
           "online", "worldwide"
         ],
-        "keywords": "online team worldwide"
+        "keywords": "online team worldwide",
+        "img":web
       },
     ]
   );
@@ -124,7 +142,7 @@ const FindGroup= () => {
           filter(groups).length === 0 ? <React.Fragment>No groups found. Try another keyword or group name!</React.Fragment> :
           filter(groups).map((groupItem, index) => (
             <Col className="order-lg-2 mt-4" lg="4">
-              <GroupCard key={index} name={groupItem.name} description={groupItem.description} tags={groupItem.tags} image={image}/>
+              <GroupCard key={index} name={groupItem.name} description={groupItem.description} tags={groupItem.tags} image={groupItem.img}/>
             </Col>
           ))
         }
